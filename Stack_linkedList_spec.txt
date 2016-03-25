@@ -1,0 +1,61 @@
+
+Project 2: Linked list implementation of Stack. 
+
+********************************
+Language: C++ and JAVA
+
+
+********************************
+
+I. Input: a text file contains a list of numbers (positive integers).
+ 
+  **** C++ The name of the input file should be given in argv[1]
+  **** Java The name of the input file should be given in argv[0]
+
+********************************
+II. Output: console  
+
+	1) For every data you read and call push:
+	   in your push method, after you created the newNode 
+         and push the newNode onto the top of linkedListStack,
+	   write newNode->data and newNode->next to the console,
+	    one newNode per text line.
+
+	2) when you pop a data from the stack, write the data to the console
+	   one data per text line.
+
+
+********************************
+III. Data structure:
+
+  - A class listNode
+       friend linkedListStack
+	  - data (int)
+	  - next (listNode*)
+        - 2 contructors
+	   - a destrctor
+
+  - a class linkedListStack
+
+	 - top (listNode*)
+ 	 - push
+	 - pop
+	 - isEmpty
+	 - one contructor
+	 - one destructor
+ 			
+Algorihtm steps: 
+
+Step 0: prepare the skelton of your program, including classes, etc.
+
+in the main(...)
+	 
+Step 1:  open inFile 
+step 2:  data <-- read one data from inFile
+step 3:  call push(data)
+step 4:  repeat step 2 to step 3 while inFile is NOT empty
+step 5: close inFile
+	   finish = 1
+step 6: finish <-- call pop // pop returns 0 if stack is empty
+step 7: repeat step 6 while finish != 0
+       	 
